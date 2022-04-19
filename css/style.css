@@ -294,6 +294,7 @@ textarea:focus {
 	height: 80%;
 	margin-left: 10px;
     margin-right: 10px;
+	justify-self: center;
 }
 
 .flex {
