@@ -10,7 +10,8 @@ body {
 }
 
 p {
-	line-height: 30px;
+	line-height: 1.2em;
+	font-size: 1em;
 }
 
 
@@ -21,22 +22,21 @@ main {
 /*Make the h1 heading bigger with a bold font*/
 h1 {
 	display: block;
-	font-size: 2em;
+	font-size: 1.5em;
 	font-weight: bold;
 	margin: 50px 0;
 	text-align: center;
-	line-height: 70px;
+	line-height: 1.2em;
 }
-
-
 
 
 .active{
     text-transform: uppercase;
 	text-align: center;
-	border: solid 5px yellow;
+	/* border: solid 5px yellow; */
 	font-size: 120%;
 	font-weight: bolder;
+	background-color:yellow;
 }
 
 .active a{
@@ -98,7 +98,7 @@ img{
 
 
 h2{
-	font-size: 2em;
+	font-size: 1.5em;
 	font-weight: bold;
 	line-height: 60px;
 }
@@ -137,13 +137,14 @@ nav ul {
 
 nav li{
 	/* background-color: rgb(233, 233, 233);*/
-	padding:20px;
+	padding:10px;
 	/* width:25%; */
 	/* border:1px solid rgb(148, 148, 144);*/
 	display: inline-block;
 	text-align: center;
 	/* width: 20%; */
-	margin: 20px;
+	margin: 10px;
+	font-size:smaller;
 }
 
 
@@ -307,6 +308,17 @@ textarea:focus {
 }
 
 
+/* flex_life */
+.flex_life {
+	display:flex;
+	flex-wrap:wrap;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.flex_life img {
+	width: 80%;
+}
 
 
 
@@ -389,8 +401,54 @@ textarea:focus {
 }
 
 
+.parallax p {
+	display: none;
+}
+
 
 @media only screen and (min-width:768px) {
+
+		/* font */
+		p, h2 {
+			font-size: larger;
+		}
+	
+		h1 {
+			font-size:2.5em;
+			line-height:1.5em;
+		}
+
+		.parallax p {
+			display: none;
+		}
+
+
+
+	/* navigation */
+	nav li {
+		margin:10px;
+		margin-left:5px;
+		margin-right:20px;
+		padding:5px;
+		font-size:20px;
+		text-align:left;
+	}
+
+	.active{
+		text-transform: uppercase;
+		text-align: left;
+		border: solid 5px yellow;
+		font-size: 80%;
+		font-weight: bolder;
+		background-color:trans;
+	}
+
+	nav ul {
+		grid-template-columns: 50% 50%;
+	}
+
+
+	/* flex */
 
 	.flex {
 		justify-content: space-evenly;
@@ -407,17 +465,34 @@ textarea:focus {
 		height: 60%;
 	}
 
-	nav ul {
-		grid-template-columns: 50% 50%;
+	
+
+	/* flex_life */
+	.flex_life {
+		justify-content:space-evenly;
+		row-gap: 50px;
 	}
 
-	#medium_image {
+	.flex_life img {
+		width:40%;
+	}
+
+	/* #medium_image {
 		grid-row-start: 1;
   		grid-row-end: 3;
 		grid-column-start: 1;
   		grid-column-end: 3;
-	}
+	} */
 
+	/* grid */
+
+	.grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		column-gap: 20px;
+		row-gap: 50px;
+	}
 
 	#image_1 {
 		grid-column: 1/3;
@@ -433,22 +508,56 @@ textarea:focus {
 		grid-row: 6/7;
 	}
 
-	.grid {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 1fr 1fr;
-		column-gap: 20px;
-		row-gap: 50px;
-	}
 }
 
 @media only screen and (min-width:1200px)
 {
+	/* font */
+	h2 {
+		font-size: larger;
+	}
+
+	p {
+		font-size: larger;
+		line-height:2em;
+	}
+
+	h1 {
+		font-size:3em;
+		line-height:2em;
+	}
+
+	
+
+
+
+	/* navigation */
+	nav li {
+		margin:50px;
+		margin-left:10px;
+		padding:5px;
+		font-size:30px;
+		text-align: justify;
+	}
+
+	.active{
+		text-transform: uppercase;
+		text-align: justify;
+		border: solid 5px yellow;
+		font-size: 110%;
+		font-weight: bolder;
+		background-color: transparent;
+	}
+
 	nav ul {
 		display:flex;
 		flex-flow:row;
-		justify-content: space-evenly;
+		justify-content:end;
 	}
+
+	
+
+	/* grid */
 
 	.grid {
 		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -514,16 +623,25 @@ textarea:focus {
 		justify-content: flex-start;
 		flex-direction: row-reverse;
 		row-gap: 200px;
+		column-gap: 10px;
 	}
 	
 	.flex img {
 		flex-basis: 20%;
-		min-height: 300px;
 	}
 
 	#flex3, #flex6 {
 		flex-basis: 20%;
-		height: 30%;
+	}
+
+	/* flex_life */
+	.flex_life {
+		justify-content:flex-start;
+		flex-direction:row-reverse;
+	}
+
+	.flex_life img {
+		width:25%;
 	}
 
 	/* img{
@@ -550,9 +668,29 @@ textarea:focus {
 	}
 
 
+	/* parallax */
+	.parallax {
+		/* The image used */
+		background-image: url("../images/kusama_parallax_background.jpeg");
+	  
+		/* Set a specific height */
+		min-height: 500px;
+	  
+		/* Create the parallax scrolling effect */
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	  }
 
 
-	
+	.parallax p {
+		display:block;
+		font-size: 2em;
+		text-align: right;
+		text-shadow: 4px 4px white;
+
+	}
 
 }
 
