@@ -292,8 +292,8 @@ textarea:focus {
 .grid img {
 	width: 80%;
 	height: 90%;
-	margin-left: auto;
-    margin-right: auto;
+	margin-left: 10px;
+    margin-right: 10px;
 }
 
 .flex {
@@ -317,7 +317,7 @@ textarea:focus {
 }
 
 .flex_life img {
-	width: 80%;
+	width: 70%;
 }
 
 
