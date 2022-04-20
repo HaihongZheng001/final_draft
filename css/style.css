@@ -392,8 +392,8 @@ textarea:focus {
 
 
 @media (prefers-reduced-motion: reduce) {
-	.parallax {
-		background-attachment: scroll;
+	.parallax p{
+		background-attachment:scroll;
 	}
 
 	.flip-card-inner {
