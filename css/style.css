@@ -446,6 +446,7 @@ textarea:focus {
 	}
 
 	.active{
+		border-radius: 0px;
 		text-transform: uppercase;
 		text-align: left;
 		border: dashed 8px yellow;
@@ -578,6 +579,7 @@ textarea:focus {
 	}
 
 	.active{
+		border-radius: 0px;
 		text-transform: uppercase;
 		text-align: justify;
 		border: solid 10px yellow;
