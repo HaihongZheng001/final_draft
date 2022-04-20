@@ -488,7 +488,6 @@ textarea:focus {
 	/* grid */
 
 	.grid {
-		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
 		column-gap: 20px;
@@ -680,6 +679,7 @@ textarea:focus {
 	  
 		/* Set a specific height */
 		min-height: 500px;
+		width:auto;
 	  
 		/* Create the parallax scrolling effect */
 		background-attachment: fixed;
