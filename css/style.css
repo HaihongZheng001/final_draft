@@ -516,6 +516,7 @@ textarea:focus {
 
 @media only screen and (min-width:1200px)
 {
+
 	/* font */
 	h2 {
 		font-size: larger;
@@ -695,6 +696,12 @@ textarea:focus {
 		text-align: right;
 		text-shadow: 4px 4px white;
 
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.parallax p{
+			background-attachment:scroll;
+		}
 	}
 
 }
